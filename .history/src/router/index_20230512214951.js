@@ -10,12 +10,8 @@ const router = createRouter({
       component: Layout,
       children: [
         {
-          path: 'category',
+          path: '/category',
           component: () => import('@/views/Category/index.vue')
-        },
-        {
-          path: '',
-          component: () => import('@/views/Home/index.vue')
         }
       ]
     },
