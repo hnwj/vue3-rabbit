@@ -2,15 +2,15 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { getCategory } from '@/api/testAPI.js'
-
+import { getCategory } from '@/api/testAPI'
+getCategory().then(res => {
+  console.log(res)
+})
 import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
-getCategory().then(res => {
-  console.log(res)
-})
+
 app.use(createPinia())
 app.use(router)
 
